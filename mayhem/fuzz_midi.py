@@ -17,9 +17,9 @@ def TestOneInput(data):
             midi_parser.MidiFile(file=f)
     except (EOFError, IOError, KeySignatureError):
         return -1
-    except IndexError:
+    except IndexError as e:
         if random.random() > 0.90:
-            raise
+            raise e
         return -1
     except ValueError as e:
         if 'start message' in str(e):
