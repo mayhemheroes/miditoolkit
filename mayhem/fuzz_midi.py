@@ -18,7 +18,7 @@ def TestOneInput(data):
     except (EOFError, IOError, KeySignatureError):
         return -1
     except IndexError:
-        if random.random() > 0.99:
+        if random.random() > 0.90:
             raise
         return -1
     except ValueError as e:
