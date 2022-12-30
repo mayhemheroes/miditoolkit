@@ -18,13 +18,13 @@ def TestOneInput(data):
     except (EOFError, IOError, KeySignatureError):
         return -1
     except IndexError:
-        if random.random() > 0.99:
+        if random.random() > 0.90:
             raise
         return -1
     except ValueError as e:
         if 'start message' in str(e):
             return -1
-        elif random.random() > 0.999:
+        elif random.random() > 0.99:
             raise e
         else:
             return -1
