@@ -6,4 +6,3 @@ testsuite:
 cmds:
   - cmd: /src/mayhem/fuzz_midi.py
     libfuzzer: true
-    timeout: 10
